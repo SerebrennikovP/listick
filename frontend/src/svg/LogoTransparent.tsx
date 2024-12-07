@@ -1,0 +1,133 @@
+import React from "react";
+
+type SVGProps = React.SVGProps<SVGSVGElement>;
+
+const LogoTransparent: React.FC<SVGProps> = (props) => (
+  <svg
+    {...props}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1868.19 1556.01"
+  >
+    <g id="Layer_2" data-name="Layer 2">
+      <g id="Layer_1-2" data-name="Layer 1">
+        <rect
+          x="1198.87"
+          y="97.04"
+          width="669.32"
+          height="1015.22"
+          fill="#fbc9a1"
+        />
+        <rect
+          x="412.79"
+          y="477.96"
+          width="1017.19"
+          height="1078.05"
+          fill="#fcf5b7"
+        />
+        <rect width="919.15" height="759.83" fill="#59c3e6" />
+        <line
+          x1="279.51"
+          y1="144.38"
+          x2="279.51"
+          y2="1422.51"
+          stroke="#1d1d1b"
+          strokeMiterlimit="10"
+          strokeWidth="10"
+        />
+        <line
+          x1="419.02"
+          y1="567.81"
+          x2="419.02"
+          y2="1422.51"
+          stroke="#1d1d1b"
+          strokeMiterlimit="10"
+          strokeWidth="10"
+        />
+        <path
+          d="M662.94,770.64V916.39c0,2.05.2,4.09.22,6.13,1.85,208.56-49,482.07-162.75,495.16-.66.08-1.1.84-1.64,1.26"
+          fill="none"
+          stroke="#1d1d1b"
+          strokeMiterlimit="10"
+          strokeWidth="10"
+        />
+        <path
+          d="M662.72,796.75V651c0-2-.2-4.08-.22-6.13-1.85-208.56,49-482.07,162.75-495.16.66-.07,1.1-.83,1.64-1.25"
+          fill="none"
+          stroke="#1d1d1b"
+          strokeMiterlimit="10"
+          strokeWidth="10"
+        />
+        <line
+          x1="913.55"
+          y1="144.89"
+          x2="913.55"
+          y2="1423.02"
+          stroke="#1d1d1b"
+          strokeMiterlimit="10"
+          strokeWidth="10"
+        />
+        <line
+          x1="1009.34"
+          y1="472.6"
+          x2="809.17"
+          y2="472.6"
+          stroke="#1d1d1b"
+          strokeMiterlimit="10"
+          strokeWidth="10"
+        />
+        <line
+          x1="1063.55"
+          y1="567.81"
+          x2="1063.55"
+          y2="1423.02"
+          stroke="#1d1d1b"
+          strokeMiterlimit="10"
+          strokeWidth="10"
+        />
+        <line
+          x1="1501.55"
+          y1="144.89"
+          x2="1501.55"
+          y2="1423.02"
+          stroke="#1d1d1b"
+          strokeMiterlimit="10"
+          strokeWidth="10"
+        />
+        <line
+          x1="1536.3"
+          y1="1112.74"
+          x2="1756.89"
+          y2="1419.79"
+          stroke="#1d1d1b"
+          strokeMiterlimit="10"
+          strokeWidth="10"
+        />
+        <line
+          x1="1536.3"
+          y1="1117.26"
+          x2="1756.89"
+          y2="810.22"
+          stroke="#1d1d1b"
+          strokeMiterlimit="10"
+          strokeWidth="10"
+        />
+        <path
+          d="M1195.47,796.94V651.19c0-2.05-.19-4.08-.21-6.13C1193.4,436.5,1244.26,163,1358,149.9c.65-.08,1.09-.84,1.64-1.26"
+          fill="none"
+          stroke="#1d1d1b"
+          strokeMiterlimit="10"
+          strokeWidth="10"
+        />
+        <path
+          d="M1195.75,770.64V916.4c0,2.05-.2,4.08-.22,6.13-1.85,208.56,49,482.07,162.75,495.16.66.07,1.1.84,1.64,1.25"
+          fill="none"
+          stroke="#1d1d1b"
+          strokeMiterlimit="10"
+          strokeWidth="10"
+        />
+      </g>
+    </g>
+  </svg>
+);
+
+export default LogoTransparent;
