@@ -21,7 +21,7 @@ function Main() {
     const touchEnd = e.changedTouches[0].clientY;
     const swipeDistance = touchStart - touchEnd;
 
-    if (Math.abs(swipeDistance) > 50) {
+    if (Math.abs(swipeDistance) > 10) {
       if (swipeDistance > 0) {
         setSwipeDirection('up');
       } else {

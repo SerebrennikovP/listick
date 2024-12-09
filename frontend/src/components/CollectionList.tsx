@@ -18,7 +18,7 @@ function CollectionList() {
                 onClick={() => setActiveListId(listId)}
                 key={listId}
                 id={listId}
-                header={listData.title}
+                listData={listData}
                 backgroundColor={listData.color || "white"}
               />
             );

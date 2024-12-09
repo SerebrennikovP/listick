@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build-sw": "workbox generateSW workbox-config.js",
+    "build-sw": "npx workbox-cli generateSW workbox-config.js",
     "build": "react-scripts build && npm run build-sw",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -45,6 +45,6 @@
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.16",
-    "workbox-build": "^7.3.0"
+    "workbox-build": "^6.6.0"
   }
 }

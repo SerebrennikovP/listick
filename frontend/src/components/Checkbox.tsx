@@ -14,7 +14,7 @@ const Checkbox: React.FC<CheckboxProps> = ({ checked, onChange }) => {
   const { backgroundColor } = useListContext();
 
   return (
-    <label className="mr-2 w-5 h-5 relative inline-block cursor-pointer select-none">
+    <label className="mr-2 w-5 min-w-5 h-5 relative inline-block cursor-pointer select-none">
       <input
         type="checkbox"
         checked={checked}
