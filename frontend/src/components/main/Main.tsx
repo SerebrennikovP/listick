@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import SignIn from "../../components/main/SignIn";
 import CollectionList from "../../components/CollectionList";
 import Header from "../../components/main/Header";
@@ -9,30 +9,36 @@ function Main() {
   const { backgroundColor } = useListContext();
 
   const [signedIn, setSignedIn] = useState(true);
-  const [scrolling, setScrolling] = useState(false);
-  const [scrollTop, setScrollTop] = useState(0);
+  const [swipeDirection, setSwipeDirection] = useState<'up' | 'down' | null>(null);
+  const [touchStart, setTouchStart] = useState(0);
 
-  useEffect(() => {
-    const onScroll = (e: any) => {
-      setScrollTop(e.target.documentElement.scrollTop);
-      setScrolling(e.target.documentElement.scrollTop > scrollTop);
-    };
-    window.addEventListener("scroll", onScroll);
+  const handleTouchStart = (e: React.TouchEvent) => {
+    const touchStart = e.touches[0].clientY;
+    setTouchStart(touchStart);
+  };
 
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [scrollTop]);
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    const touchEnd = e.changedTouches[0].clientY;
+    const swipeDistance = touchStart - touchEnd;
+
+    if (Math.abs(swipeDistance) > 50) {
+      if (swipeDistance > 0) {
+        setSwipeDirection('up');
+      } else {
+        setSwipeDirection('down');
+      }
+    }
+  };
 
   return (
     <div
       style={{ backgroundColor }}
-      className={`p-8 transition-all duration-300 min-h-[100dvh] ${
-        scrolling ? "pt-4" : "pt-[4rem]"
-      }`}
+      className={`p-8 transition-all duration-300 min-h-[100dvh] ${swipeDirection === 'up' ? "pt-4" : "pt-[4rem]"}`}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
     >
       <Header
-        className={`${
-          scrolling ? "top-[-3.5rem]" : "top-0"
-        } transition-all z-50 duration-300`}
+        className={`${swipeDirection === 'up' ? "top-[-3.5rem]" : "top-0"} transition-all z-50 duration-300`}
       />
       {signedIn ? <CollectionList /> : <SignIn />}
     </div>

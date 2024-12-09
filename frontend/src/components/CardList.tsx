@@ -12,7 +12,7 @@ function CardList(props: {
       className="rounded-lg cursor-pointer border-gray-300 border-[1px] p-4 shadow-md text-gray-700"
       style={{ backgroundColor }}
     >
-      <h3 style={{ fontFamily: "Arsenal SC" }} className="text-lg">
+      <h3 style={{ fontFamily: "Arsenal SC" }} className="text-base">
         {header}
       </h3>
     </div>
